@@ -14,7 +14,6 @@
 ## Charter Mission
 
 **Explore** the sign up and login functionality  
-**With** various user inputs and scenarios  
 **To discover** bugs, usability issues, and edge cases in the authentication flow
 
 ---

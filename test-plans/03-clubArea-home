@@ -1,0 +1,86 @@
+# Exploratory Test Charter: Club Dashboard Home
+
+> **Feature**: Club Management Dashboard (Home)  
+> **Status**: Ready for Testing  
+> **Tester**: [Your Name]  
+> **Date**: [Test Date]  
+> **Environment**: Production
+> **Session Duration**: [e.g., 90 minutes]
+
+---
+
+## Charter Mission
+
+**Explore** the Club Home Dashboard  
+**To discover** data syncing issues, broken navigation links, and UI/layout bugs.
+
+---
+
+## Areas to Explore
+### 1. Dashboard Happy Path
+*Simulate a club manager logging in to check their status.*
+
+-   [ ] **Load Dashboard**: Page loads under 2 seconds without errors.
+-   [ ] **Review KPI Overview**: Manager sees "Members" and "Leagues" counts immediately.
+-   [ ] **Navigate to a League**: Manager clicks a league in "Your Leagues" and lands on the league details page.
+-   [ ] **Return to app**: Manager clicks "Return to app" in the sidebar and returns to this user mode.
+
+### 1. KPI Cards (Top Row Metrics)
+*Check if the numbers match the actual data in the system.*
+
+#### Data Accuracy
+- [ ] **Members Count**: Verify the number matches the actual list in the "Members" tab.
+- [ ] **Active Leagues**: Verify count matches the number of ongoing leagues.
+- [ ] **Upcoming Gamedays**: Create a game and verify it updates.
+- [ ] **Pending Matches**: Create a pending match and verify it updates.
+
+#### UI/Interaction
+- [ ] **Clickability**
+- [ ] **Responsiveness**
+- [ ] **Loading State**
+
+---
+
+### 2. "Upcoming Gamedays" Section
+- [ ] Verify the section display the correct information (if any games are scheduled).
+
+---
+
+### 3. "Your Leagues" Section
+#### List Item Accuracy
+- [ ] **League Name**: Verify the name is correct.
+- [ ] **Tags**: Verify the tags are correct.
+- [ ] **Season**: Verify the season is correct.
+- [ ] **Counts**: Verify the counts are correct.
+
+#### Navigation
+- [ ] Click a League row -> Should go to that League's dashboard.
+- [ ] Click "Manage ->" link -> Should go to the main Leagues page.
+
+---
+
+### 4. Quick Actions Sidebar
+#### Functionality
+- [ ] **+ Create League**: Opens the creation modal/page?
+- [ ] **Import Members**: Opens the CSV import tool or form?
+- [ ] **Manage Leagues**: Redirects to the Leagues tab?
+- [ ] **View Members**: Redirects to the Members tab?
+
+---
+
+### 5. "Need Help?" Section
+- [ ] Click "Go to Leagues" button -> Verify destination.
+
+---
+
+### 6. Sidebar Navigation (Left Menu)
+- [ ] **Active State**: Is "Home" highlighted (purple background)?
+- [ ] **Collapsible**: Does the menu collapse (if the feature exists)?
+- [ ] **Club Switcher**: Click "Marcelo's Club" (top left) -> Can you switch clubs?
+- [ ] **User Profile**: Click "Marcelo" (bottom left) -> Does the profile menu open?
+
+---
+
+### 7. Global Header / Breadcrumbs
+- [ ] **Title**: Verify "Marcelo's Club" matches the club name setting.
+- [ ] **Subtitle**: Verify "Manage your club..." text is correct.

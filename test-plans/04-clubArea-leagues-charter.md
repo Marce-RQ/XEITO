@@ -4,6 +4,7 @@
 > **Status**: Ready for Testing  
 > **Tester**: [Your Name]  
 > **Date**: [Test Date]  
+> **Environment**: Production
 > **Session Duration**: [e.g., 90 minutes]
 
 ---
@@ -11,16 +12,13 @@
 ## Charter Mission
 
 **Explore** the league creation and management functionality  
-**With** various data inputs and user interactions  
 **To discover** bugs, usability issues, and edge cases in league operations
 
 ---
 
 ## Prerequisites
 
--   [ ] Logged in user account
--   [ ] Understanding of what a "league" represents in this app
--   [ ] Access to test environment
+-   [ ] Logged in user account as club admin
 
 ---
 
