@@ -2,11 +2,12 @@
 
 > **Feature**: User Authentication  
 > **Status**: Ready for Testing  
-> **Tester**: Marcelo
+> **Tester**: Marcelo Romero
 > **Date**: 16 Dec 2025
+> **Environment**: Production
 > **Session Start**: 13:50
-> **Session End**: [e.g., 90 minutes]
-> **Session Duration**: [e.g., 90 minutes]
+> **Session End**: 15:15
+> **Session Duration**: 1 hour 25 minutes
 
 ---
 
@@ -84,201 +85,75 @@
 #### Happy Path
 
 -   [ ] Navigate to login page
--   [ ] Enter valid email
--   [ ] Enter valid OTP
--   [ ] Redirect to Dashboard
+-   [ ] Enter valid credentials 
+-   [ ] Submit form successfully
+-   [ ] Redirect to appropriate page (dashboard, home, etc.)
 -   [ ] User session persists after refresh
 
 #### Input Validation
 
 **Email/Username:**
 
--   [ ] Empty field 
--   [ ] Invalid format 
--   [ ] Non-existent email 
+-   [ ] Empty field (Error: Please fill in this field)
+-   [ ] Invalid format (Error: …missing @)
+-   [ ] Non-existent email (Error: No account found with this email)
 -   [ ] Case sensitivity
 
 **OTP Code:**
 
--   [ ] Empty fiel
--   [ ] Wrong Code 
--   [ ] Partial Code (Enter a 6 digit code)
--   [ ] Login with already used code (The requested action could only be executed once.)
+-   [ ] Empty Field (Error: Please fill in this field)
+-   [ ] Wrong Code (Error: Please enter a valid confirmation code)
+-   [ ] Partial Code (typo) (Error: Enter a 6 digit code)
+-   [ ] Old (not used) Code
+-   [ ] Old (used) Code
+-   [ ] Resend Code
 
 
 #### Authentication Scenarios
 
 -   [ ] Login with newly created account
 -   [ ] Login after logout
--   [ ] Login after session timeout
--   [ ] Multiple failed OTP code attempts (account locked)
--   [ ] Login after password reset (if exists)
+-   [ ] Login with locked account
 
 #### UI/UX Checks
 
--   [ ] Error messages for wrong credentials
--   [ ] Generic error (don't reveal "email not found")
+-   [ ] Error messages for wrong email
+-   [ ] Error messages for wrong OTP
 -   [ ] Loading state during authentication
 -   [ ] Disable submit button during processing
 -   [ ] Tab order is logical
 -   [ ] Enter key submits form
--   [ ] Link to sign up page works
--   [ ] Link to password reset works (if exists)
 
 ---
 
-### 3. Social Authentication (if applicable)
-
--   [ ] Google sign in button exists
--   [ ] Facebook sign in button exists
--   [ ] Apple sign in button exists
--   [ ] Social auth flow works correctly
--   [ ] Account linking for existing email
--   [ ] New account creation via social auth
-
----
-
-### 4. Password Reset (if available)
-
--   [ ] Password reset link accessible
--   [ ] Enter email for reset
--   [ ] Email sent confirmation
--   [ ] Reset link works
--   [ ] Can set new password
--   [ ] Login with new password works
--   [ ] Old password no longer works
-
----
-
-### 5. Session Management
+### 3. Session Management
 
 -   [ ] User stays logged in after page refresh
--   [ ] User stays logged in after browser close (if "Remember Me")
+-   [ ] User stays logged in after browser close
 -   [ ] User logged out after timeout (test duration)
 -   [ ] Logout button/link works
--   [ ] After logout, can't access protected pages
--   [ ] Redirect to login when accessing protected route while logged out
+-   [ ] After logout, can't access protected pages0
 
 ---
 
-### 6. Cross-Browser Testing
+### 4. Cross-Browser Testing
 
 Test critical flows on:
 
 -   [ ] Chrome (latest)
 -   [ ] Firefox (latest)
 -   [ ] Safari (latest)
--   [ ] Edge (if relevant)
+-   [ ] Edge (latest)
 
 ---
 
-### 7. Responsive/Mobile Testing
+### 5. Responsive/Mobile Testing
 
--   [ ] Sign up form usable on mobile (375px width)
+-   [ ] Sign up form usable on mobile 
 -   [ ] Login form usable on mobile
 -   [ ] Touch interactions work correctly
 -   [ ] Keyboard appears appropriately
 -   [ ] Form doesn't zoom on input focus (iOS)
--   [ ] Buttons are tap-friendly (min 44px)
+-   [ ] Buttons are tap-friendly
 
 ---
-
-## Test Data
-
-### Valid Test Accounts
-
-```
-Email: [test+1@example.com]
-Password: [TestPass123!]
-
-Email: [test+2@example.com]
-Password: [TestPass123!]
-```
-
-### Invalid Test Data
-
-```
-Invalid emails:
-- plaintext
-- @example.com
-- user@
-- user @example.com
-- user..name@example.com
-
-Invalid passwords:
-- 123 (too short)
-- [test minimum length]
-```
-
----
-
-## Bugs & Issues Found
-
-### Bug #1: [Title]
-
-**Severity**: [Critical/High/Medium/Low]  
-**Steps to Reproduce**:
-
-1. [Step 1]
-2. [Step 2]
-3. [Step 3]
-
-**Expected**: [What should happen]  
-**Actual**: [What actually happened]  
-**Screenshot/Video**: [Link if available]  
-**Browser**: [Chrome 120, etc.]  
-**Device**: [Desktop/Mobile]
-
----
-
-### Bug #2: [Title]
-
-[Same format as above]
-
----
-
-## Observations & Notes
-
-### Positive Findings
-
--   [Things that work well]
--   [Good UX decisions]
-
-### Areas for Improvement
-
--   [Non-critical issues]
--   [UX suggestions]
-
-### Questions for Dev Team
-
--   [Unclear behavior]
--   [Intended vs. actual functionality]
-
----
-
-## Coverage Summary
-
-**Areas Covered**: [e.g., 85% - covered most scenarios]  
-**Areas Not Covered**: [e.g., Didn't test social auth, no accounts available]  
-**Confidence Level**: [High/Medium/Low]  
-**Ready for Release?**: [Yes/No/With Conditions]
-
----
-
-## Follow-Up Actions
-
--   [ ] File bugs in [tracking system]
--   [ ] Retest after bug fixes
--   [ ] Test integration with Leagues/Profile
--   [ ] Performance testing for login speed
--   [ ] Security review (if required)
-
----
-
-## Session Notes
-
-**Start Time**: [HH:MM]  
-**End Time**: [HH:MM]  
-**Interruptions**: [Any blockers or interruptions]  
-**Test Environment**: [staging.xeito.app]  
-**Build/Version**: [if available]

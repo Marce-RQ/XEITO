@@ -35,6 +35,6 @@ Currently focused on **manual exploratory testing**. Automation will be consider
 1. Read [QA Onboarding](QA-ONBOARDING.md)
 2. Familiarize yourself with the risk assessment and bug report template in `bug-report/`
 3. Use exploratory test charters in `test-plans/`
-4. Document findings using [Linear](pdfAndImages/Linear.png)
+4. Document findings using [Linear](bug-report/Linear.png)
 
 
