@@ -2,8 +2,10 @@
 
 > **Feature**: User Authentication  
 > **Status**: Ready for Testing  
-> **Tester**: [Your Name]  
-> **Date**: [Test Date]  
+> **Tester**: Marcelo
+> **Date**: 16 Dec 2025
+> **Session Start**: 13:50
+> **Session End**: [e.g., 90 minutes]
 > **Session Duration**: [e.g., 90 minutes]
 
 ---
@@ -18,7 +20,7 @@
 
 ## Areas to Explore
 
-### 1. Sign Up Flow
+### 1. Sign Up Flow (NOT AVAILABLE ATM)
 
 #### Happy Path
 
@@ -82,34 +84,34 @@
 #### Happy Path
 
 -   [ ] Navigate to login page
--   [ ] Enter valid credentials
--   [ ] Submit form successfully
--   [ ] Redirect to appropriate page (dashboard, home, etc.)
+-   [ ] Enter valid email
+-   [ ] Enter valid OTP
+-   [ ] Redirect to Dashboard
 -   [ ] User session persists after refresh
 
 #### Input Validation
 
 **Email/Username:**
 
--   [ ] Empty field
--   [ ] Invalid format
--   [ ] Non-existent email
+-   [ ] Empty field 
+-   [ ] Invalid format 
+-   [ ] Non-existent email 
 -   [ ] Case sensitivity
 
-**Password:**
+**OTP Code:**
 
--   [ ] Empty password
--   [ ] Wrong password
--   [ ] Partial password (typo)
+-   [ ] Empty fiel
+-   [ ] Wrong Code 
+-   [ ] Partial Code (Enter a 6 digit code)
+-   [ ] Login with already used code (The requested action could only be executed once.)
+
 
 #### Authentication Scenarios
 
 -   [ ] Login with newly created account
 -   [ ] Login after logout
--   [ ] Login with "Remember Me" (if exists)
--   [ ] Login without "Remember Me"
 -   [ ] Login after session timeout
--   [ ] Multiple failed login attempts (account lockout?)
+-   [ ] Multiple failed OTP code attempts (account locked)
 -   [ ] Login after password reset (if exists)
 
 #### UI/UX Checks

@@ -10,9 +10,8 @@
 
 | Email          | Password         | Role  | Purpose           | Environment |
 | -------------- | ---------------- | ----- | ----------------- | ----------- |
-| [To be filled] | [Secure storage] | User  | General testing   | Staging     |
-| [To be filled] | [Secure storage] | Admin | Admin features    | Staging     |
-| [To be filled] | [Secure storage] | User  | Edge case testing | Staging     |
+| [To be filled] | [Secure storage] | User  | General testing   |  --    |
+| romeroredacre@gmail.com| passwordless login | Admin | Admin features    | PROD     |
 
 **⚠️ Security Note**: Store actual credentials in a secure password manager (1Password, LastPass, etc.), not in this file.
 
