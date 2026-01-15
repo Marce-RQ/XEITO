@@ -10,8 +10,7 @@
 
 | Email          | Password         | Role  | Purpose           | Environment |
 | -------------- | ---------------- | ----- | ----------------- | ----------- |
-| [To be filled] | [Secure storage] | User  | General testing   |  --    |
-| romeroredacre@gmail.com| passwordless login | Admin | Admin features    | PROD     |
+| romeroredacre@gmail.com| OTP via email | Admin | Admin features    | PROD     |
 
 **⚠️ Security Note**: Store actual credentials in a secure password manager (1Password, LastPass, etc.), not in this file.
 
@@ -23,9 +22,9 @@
 
 | League Name          | Creator       | Purpose             | Status |
 | -------------------- | ------------- | ------------------- | ------ |
-| QA Test League Alpha | [Test User 1] | Happy path testing  | Active |
-| QA Test League Beta  | [Test User 1] | Validation testing  | Active |
-| QA Edge Case League  | [Test User 2] | Edge case scenarios | Active |
+| QA-LeagueOne | romeroredacre@gmail.com | Happy path testing  | Active |
+| QA-LeagueTwo | romeroredacre@gmail.com | Validation testing  | Active |
+| QA-LeagueThree | romeroredacre@gmail.com | Edge case scenarios | Active |
 
 **Note**: Prefix all test data with "QA Test" for easy identification and cleanup.
 
@@ -36,7 +35,6 @@
 ### Data Creation
 
 -   Always use identifiable prefixes: "QA Test", "TEST", "AUTOMATED"
--   Use timestamp in names to track when created: "QA Test League 2024-12-01"
 -   Create separate data for different test scenarios
 -   Document dependencies between test data
 
@@ -64,6 +62,7 @@ Valid:
 - test+valid@example.com
 - qa.tester@example.com
 - test_user123@example.co.uk
+- TEST+valid@example.com
 
 Invalid (for testing validation):
 - plaintext
@@ -71,19 +70,8 @@ Invalid (for testing validation):
 - test@
 - test @example.com
 - test..name@example.com
-```
-
-### Passwords
-
-```
-Valid (meets requirements):
-- TestPassword123!
-- SecurePass456$
-
-Invalid (for testing validation):
-- 123 (too short)
-- password (no numbers)
-- 12345678 (no letters)
+- testname😊@example.com
+- Bob</username><role>admin</role>@injection.com
 ```
 
 ### League Names
@@ -92,35 +80,12 @@ Invalid (for testing validation):
 Valid:
 - Professional Tennis League
 - Summer 2024 Championship
-
-Edge Cases:
 - A (single character)
-- [250 character string]
 - League'with"special'chars
 - 🏆 League with Emoji 🎾
 ```
 
 ---
-
-## Environment-Specific Data
-
-### Local Environment
-
--   [Document local setup data requirements]
--   [Seed data scripts location]
-
-### Development Environment
-
--   URL: [dev.xeito.app]
--   Shared data: [Yes/No]
--   Cleanup policy: [Daily/Weekly]
-
-### Staging Environment
-
--   URL: [staging.xeito.app]
--   Shared data: [Yes/No]
--   Cleanup policy: [Before releases]
--   **Primary testing environment**
 
 ### Production
 
@@ -137,7 +102,7 @@ Edge Cases:
 
 **For Testing Leagues:**
 
-1. Need: Valid user account (logged in)
+1. Need: Valid admin user account (logged in)
 2. Create: League with valid data
 3. Optional: Team members, matches, schedule
 
@@ -146,25 +111,6 @@ Edge Cases:
 1. Need: Valid user account (logged in)
 2. Modify: Profile fields
 3. Upload: Test avatar image
-
----
-
-## Test Files & Assets
-
-### Profile Pictures
-
-Location: `test-data/images/`
-
--   `avatar-valid.jpg` (500KB, 800x800)
--   `avatar-large.jpg` (5MB, test size limit)
--   `avatar-small.png` (10KB, 100x100)
--   `avatar-invalid.pdf` (test format validation)
-
-### Documents (if applicable)
-
-Location: `test-data/documents/`
-
--   [List any test documents needed]
 
 ---
 
@@ -179,44 +125,10 @@ Location: `test-data/documents/`
 ### Shared Test Data
 
 -   Mark clearly as "SHARED - DO NOT DELETE"
--   Document in team wiki/Notion
+-   Document in team Confluence/Notion
 -   Coordinate changes in team chat
 
 ---
-
-## API Test Data
-
-### Sample API Payloads
-
-**Create League:**
-
-```json
-{
-	"name": "QA Test League",
-	"description": "Test league for QA automation",
-	"startDate": "2024-12-01",
-	"endDate": "2024-12-31"
-}
-```
-
-**Update Profile:**
-
-```json
-{
-	"displayName": "QA Tester",
-	"bio": "Test user for quality assurance"
-}
-```
-
----
-
-## Data Management Tools
-
-### Scripts (if available)
-
--   `scripts/seed-data.sh` - Seed test database
--   `scripts/cleanup-test-data.sh` - Remove QA test data
--   `scripts/create-test-user.sh` - Create test account
 
 ### Manual Processes
 
@@ -252,17 +164,6 @@ Location: `test-data/documents/`
 3. **Document as you go** - Update this file when creating new test data
 4. **Security first** - Never commit credentials to version control
 5. **Think about cleanup** - Easy to create, easy to remove
-
----
-
-## Questions for Dev Team
-
--   [ ] How to reset/seed test data?
--   [ ] What's the data retention policy for test environments?
--   [ ] Can we have dedicated test user accounts?
--   [ ] Is there an API or script for bulk data creation?
--   [ ] How to coordinate with other testers on shared data?
--   [ ] What data should never be deleted?
 
 ---
 
